@@ -1,6 +1,10 @@
 # smush_extra_slots_effect_fix
 A skyline plugin for smash ultimate that fixes severe effect glitches on added slots (c08+) for certain chars.
 
+# Dependencies
+* nro hook (https://github.com/ultimate-research/nro-hook-plugin)
+* smashline hook (https://github.com/blu-dev/smashline_hook)
+
 # Why do some chars effects glitch out after slot 8?
 * Some fighter's moves choose an effect by specifying the effect by name but then offset the specified effect with the slot. Since the devs only had 8 slots in mind, slots above 8 will begin to load incorrect effects from further along in the effect file.
 
