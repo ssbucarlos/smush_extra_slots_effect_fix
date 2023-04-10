@@ -5,6 +5,12 @@ A skyline plugin for smash ultimate that fixes severe effect glitches on added s
 * nro hook (https://github.com/ultimate-research/nro-hook-plugin)
 * smashline hook (https://github.com/blu-dev/smashline_hook)
 
+# Issues? Crashes?
+* You will crash without the dependencies above.
+* If you still crash, try removing just this plugin, but keep the nro_hook and smashline_hook installed. If it crashes still without this plugin, then its not an issue with this plugin. 
+* If it only crashes when installing this plugin feel free to make a github issue.
+* If you find a char that is listed here as "fixed" and u find an issue with a move, feel free to make a github issue
+
 # Why do some chars effects glitch out after slot 8?
 * Some fighter's moves choose an effect by specifying the effect by name but then offset the specified effect with the slot. Since the devs only had 8 slots in mind, slots above 8 will begin to load incorrect effects from further along in the effect file.
 
