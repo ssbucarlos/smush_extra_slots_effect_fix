@@ -96,11 +96,27 @@ unsafe fn effect_specialsloop(fighter: &mut L2CAgentBase) {
 }
 
 
+#[acmd_script( agent = "yoshi", script = "effect_attackairlw", category = ACMD_EFFECT, low_priority )]
+unsafe fn effect_attackairlw(agent: &mut L2CAgentBase) {
+    let slot_wrapped = WorkModule::get_int(agent.module_accessor, *FIGHTER_INSTANCE_WORK_ID_INT_COLOR) % 8;
+    let effect_name = std::format!("yoshi_air_trace_{:02}", slot_wrapped+1);
+
+    frame(agent.lua_state_agent, 10.0);
+    if macros::is_excute(agent) {
+        macros::EFFECT_FOLLOW_NO_STOP(agent, Hash40::new(&effect_name), Hash40::new("top"), 0, -2, 0, 0, 0, 0, 1, true);
+    }
+
+    frame(agent.lua_state_agent, 40.0);
+    if macros::is_excute(agent) {
+        macros::EFFECT_OFF_KIND(agent, Hash40::new(&effect_name), true, true);
+    }
+}
+
 pub fn install() {
     smashline::install_acmd_scripts!(
         effect_entryr,
         effect_entryl,
         effect_specialsloop,
-
+        effect_attackairlw,
     );
 }
