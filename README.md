@@ -6,6 +6,7 @@ A skyline plugin for smash ultimate that fixes severe effect glitches on added s
 * smashline hook (https://github.com/blu-dev/smashline_hook)
 
 # Issues? Crashes?
+* This plugin is not compatible with smashline 2, so if u installed smashline 2, you will crash.
 * You will crash without the dependencies above.
 * If you still crash, try removing just this plugin, but keep the nro_hook and smashline_hook installed. If it crashes still without this plugin, then its not an issue with this plugin. 
 * If it only crashes when installing this plugin feel free to make a github issue.
